@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sandbox</title>
+
+        <style>
+            :root{
+                --green: #6de792;
+                --hover-green: #75ffa3;
+                --charcoal: #444444;
+            }
+            *{
+                box-sizing: border-box;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                outline: none;
+                font-family: Lato,serif;
+                color: var(--charcoal);
+            }
+            body{
+                background-color: #f2f2f2;
+            }
+            .container{
+                width: 500px;
+                margin: 100px auto;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 5px;
+            }
+            #login-box{
+                width: 55%;
+                margin: 15px auto;
+                display: block;
+                padding: 10px;
+            }
+            #login-box label{
+                width: 100%;
+            }
+            .loginHeading{
+                text-align: center;
+                font-size: xx-large;
+                font-weight: bold;
+                color: var(--green);
+            }
+            .loginInputStyle{
+                width: 100%;
+                border: none;
+                border-bottom: var(--charcoal) 1px solid;
+            }
+            #login-submit{
+                display: block;
+                margin: 35px auto;
+                width: 100%;
+                height: 30px;
+                border: none;
+                background-color: var(--green);
+                font-weight: bold;
+            }
+            #login-submit:hover{
+                background-color: var(--hover-green);
+                border: none;
+            }
+            .inputLabel{
+                visibility: hidden;
+            }
+            #login-box input{
+                font-size: 1em;
+            }
+
+            #login-box input:focus+label{
+                visibility: visible;
+                position: relative;
+                top: -45px;
+                color: var(--green);
+                font-weight: bold;
+            }
+            #login-box input:focus::placeholder{
+                visibility: hidden;
+            }
+
+
+
+            .innerBoxStyle{
+                background-color: #fff;
+            }
+            .defaultBoxPadding{
+                padding: 5px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+    <div class="container">
+        <div id="left-box" class="innerBoxStyle defaultBoxPadding">
+            <div id="login-box" class="">
+                <p class="loginHeading">Login</p>
+                <br>
+                <form action="">
+                    <input type="email" id="email-input" class="loginInputStyle" placeholder="Email">
+                    <label class="inputLabel" for="email-input">Email</label>
+
+                    <br>
+                    <br>
+
+                    <input type="password" id="password-input" class="loginInputStyle" placeholder="Password">
+                    <label class="inputLabel" for="password-input">Password</label>
+
+                    <br>
+
+                    <input id="login-submit" type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+
+
+    </script>
+    </body>
+</html>
